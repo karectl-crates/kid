@@ -17,10 +17,10 @@
     }
   },
   "forwardPorts": [
-    "k3s-server:80"
+    80
   ],
   "portsAttributes": {
-    "k3s-server:80": {
+    "80": {
       "label": "TRE ingress",
       "onAutoForward": "notify"
     }
