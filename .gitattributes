@@ -1,0 +1,16 @@
+# Line endings: always LF in the working tree, on every OS.
+#
+# The dev container is Linux, but on a laptop it runs the files straight from
+# the host checkout. Git for Windows defaults to core.autocrlf=true, which turns
+# LF into CRLF on checkout; bash then reads the trailing \r as part of the
+# command (e.g. "set: pipefail: invalid option name") and bootstrap.sh fails.
+# eol=lf overrides each contributor's autocrlf setting. Linux, macOS and
+# Codespaces already use LF, so nothing changes there.
+* text=auto eol=lf
+
+# Binary files: never convert or diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
